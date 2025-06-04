@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/techno.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+CU:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="image/logo.png">
+    <title>Cosmo</title>
+</head>
+<body>
+    <header>
+        <img class="menuburge" src="image/logo.png" alt="logo">
+        <nav class="main-nav">
+            <ul>
+                <li><a class="titre-nav" href="index.html">Accueil</a></li>
+                <li>
+                    <a class="titre-nav" href="service.html">Nos Services</a>
+                    <div class="sub-nav">
+                        <div class="titles">
+                            <a href="service.html#satcom-id" class="sub_titre-nav"
+                                data-bg="image/satcom.webp">SatCom</a>
+                            <a href="service.html#spacecare-id" class="sub_titre-nav"
+                                data-bg="image/spacecare.jpg">SpaceCare</a>
+                            <a href="service.html#transport-id" class="sub_titre-nav"
+                                data-bg="image/transport.avif">Transport</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="titre-nav" href="techno.html">Nos Technologies</a>
+                    <div class="sub-nav">
+                        <div class="titles">
+                            <a href="techno.html#techno" class="sub_titre-nav" data-bg="image/equipement.jpg">Infrastructure</a>
+                            <a href="techno.html#combi" class="sub_titre-nav" data-bg="image/equipement.webp">Combinaison</a>
+                            <a href="techno.html#vaisseau" class="sub_titre-nav" data-bg="image/vaisseau.jpg">Vaisseau</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="titre-nav" href="ship.html">Nos Vaisseaux</a>
+                    <div class="sub-nav">
+                        <div class="titles">
+                            <a href="ship.html" class="sub_titre-nav" data-bg="image/rover.jpg">Rover</a>
+                            <a href="ship.html" class="sub_titre-nav" data-bg="image/sat-nav.webp">Satellite</a>
+                            <a href="ship.html" class="sub_titre-nav" data-bg="image/ship.webp">Lanceur</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a class="titre-nav" href="login.html">Connexion / Inscription</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 id="techno"> Nos Technologies</h1>
+                <!-- Section Infrastructure -->
+        <section class="infrastructure">
+            <h2>Infrastructure</h2>
+            <p class="article categorie1 texte" data-section="infra">Habitat</p>
+            <p class="article categorie2 texte" data-section="infra">Mine</p>
+            <p class="article categorie3 texte" data-section="infra">BioDôme</p>
+            <p class="article categorie4 texte" data-section="infra">Site de lancement</p>
+            <div class="flex">
+                <div class="colone">
+                    <img class="article categorie1" src="image/habitat.png" alt="Habitat" data-section="infra">
+                    <img class="article categorie2" src="image/extraction.png" alt="Extracteur" data-section="infra">
+                    <img class="article categorie3" src="image/biodome.png" alt="Biodome" data-section="infra">
+                    <img class="article categorie4" src="image/lanceur.png" alt="Site de lancement" data-section="infra">
+                    <div class="shadow"></div>
+                </div>
+                <div class="display">
+                    <aside class="buttons" data-section="infra">
+                        <button class="button" onclick="filterArticles('categorie1', 'infra')">Habitat</button>
+                        <button class="button" onclick="filterArticles('categorie2', 'infra')">Extracteur</button>
+                        <button class="button" onclick="filterArticles('categorie3', 'infra')">BioDôme</button>
+                        <button class="button" onclick="filterArticles('categorie4', 'infra')">Lanceur</button>
+                    </aside>
+                    <section class="articles" data-section="infra">
+                        <div class="article categorie1" data-section="infra">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h3>Habitat<br>Planétaire</h3>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Nombre de places/</p>
+                                        <p class="sub-part2">3 a 6 Colons</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Durée de vie estimée</p>
+                                        <p class="sub-part2">25 ans</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Surface au sol</p>
+                                        <p class="sub-part2">80 mètres carrés</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Poids total</p>
+                                        <p class="sub-part2">15 tonnes</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Alimentation</p>
+                                        <p class="sub-part2">Energie Nucléaire</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Temps d’installation</p>
+                                        <p class="sub-part2">1 mois</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Montant</p>
+                                        <p class="sub-part2">80 000$</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="article categorie2" data-section="infra">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h3>Exploitation<br>Minière</h3>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Rendement</p>
+                                        <p class="sub-part2">1 Tonne / Heure</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Durée de vie estimée</p>
+                                        <p class="sub-part2">25 ans</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Surface au sol</p>
+                                        <p class="sub-part2">80 mètres carrés</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Poids total</p>
+                                        <p class="sub-part2">15 tonnes</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Alimentation</p>
+                                        <p class="sub-part2">Energie Solaire</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Temps d'installation</p>
+                                        <p class="sub-part2">2 mois</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Montant</p>
+                                        <p class="sub-part2">800 000$</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="article categorie3" data-section="infra">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h3>Bio<br>Dôme</h3>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Terre cultivable</p>
+                                        <p class="sub-part2">60 mètres carrés</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Durée de vie estimée</p>
+                                        <p class="sub-part2">25 ans</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Surface au sol</p>
+                                        <p class="sub-part2">80 mètres carrés</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Poids total</p>
+                                        <p class="sub-part2">15 tonnes</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Alimentation</p>
+                                        <p class="sub-part2">Energie Nucléaire</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Temps d'installation</p>
+                                        <p class="sub-part2">2 mois</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Montant</p>
+                                        <p class="sub-part2">80 000$</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="article categorie4" data-section="infra">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h3>Site de <br>Lancement</h3>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Lanceur compatible</p>
+                                        <p class="sub-part2">Type C ou moins</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Durée de vie estimée</p>
+                                        <p class="sub-part2">100 lancements</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Surface au sol</p>
+                                        <p class="sub-part2">1 Hectare</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Poids de la tour </p>
+                                        <p class="sub-part2">100 Tonnes</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Alimentation</p>
+                                        <p class="sub-part2">Energie Nucléaire</p>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Temps d'installation</p>
+                                        <p class="sub-part2">4 mois</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Montant</p>
+                                        <p class="sub-part2">80 000$</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <a href="compte.html#commande"><button class="commande">Commander</button></a>
+                    </section>
+                </div>
+            </div>
+        </section>
+                <!-- Section Combinaison -->
+        <section class="combinaison">
+            <h2 id="combi">Combinaisons</h2>
+            <p class="article categorie5 texte" data-section="combi">Planétaire</p>
+            <p class="article categorie6 texte" data-section="combi">Planétaire v2</p>
+            <p class="article categorie7 texte" data-section="combi">Minière</p>
+            <p class="article categorie8 texte" data-section="combi">Spacial</p>
+            <div class="flex">
+                <div class="colone">
+                    <img class="article categorie5" src="image/comi-1.png" alt="Combinaison Planétaire"
+                        data-section="combi">
+                    <img class="article categorie6" src="image/comi-1.png" alt="Combinaison Planétaire"
+                        data-section="combi">
+                    <img class="article categorie7" src="image/combi-min.png" alt="Combinaison Minière"
+                        data-section="combi">
+                    <img class="article categorie8" src="image/combi-0g.png" alt="Combinaison Zéro G"
+                        data-section="combi">
+                    <div class="shadow"></div>
+                </div>
+                <div class="display">
+                    <aside class="buttons" data-section="combi">
+                        <button class="button" onclick="filterArticles('categorie5', 'combi')"class="active">Planétaire</button>
+                        <button class="button" onclick="filterArticles('categorie6', 'combi')"class="active">Planétaire  V2</button>
+                        <button class="button" onclick="filterArticles('categorie7', 'combi')">Minière</button>
+                        <button class="button" onclick="filterArticles('categorie8', 'combi')">Spatiale</button>
+                    </aside>
+                    <section class="articles" data-section="combi">
+                        <div class="article categorie5" data-section="combi">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h3>Combinaison<br>Planétaire v1</h3>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Utilisation</p>
+                                        <p class="sub-part2">Toutes atomsphères</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Plage thermique</p>
+                                        <p class="sub-part2">-60°C à +120°C</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Autonomie O2</p>
+                                        <p class="sub-part2">7 heures</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Poids</p>
+                                        <p class="sub-part2">50 kg Sur Terre</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Montant</p>
+                                        <p class="sub-part2">9 000$</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="article categorie6" data-section="combi">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h3>Combinaison<br>Planétaire v2</h3>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Utilisation</p>
+                                        <p class="sub-part2">Toutes atomsphères</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Plage thermique</p>
+                                        <p class="sub-part2">-160°C à +220°C</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Autonomie O2</p>
+                                        <p class="sub-part2">8 heures</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Poids</p>
+                                        <p class="sub-part2">60 kg Sur Terre</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Montant</p>
+                                        <p class="sub-part2">10 500$</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="article categorie7" data-section="combi">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h3>Combinaison<br>Mineur</h3>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Utilisation</p>
+                                        <p class="sub-part2">Toutes atomsphères</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Plage thermique</p>
+                                        <p class="sub-part2">-260°C à +260°C</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Autonomie O2</p>
+                                        <p class="sub-part2">5 heures</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Poids</p>
+                                        <p class="sub-part2">55 kg Sur Terre</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Montant</p>
+                                        <p class="sub-part2">90 000$</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="article categorie8" data-section="combi">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h3>Combinaison<br>Spaciale</h3>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Utilisation</p>
+                                        <p class="sub-part2"> Milieu non atomsphèrique</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Plage thermique</p>
+                                        <p class="sub-part2">-160°C à +220°C</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Autonomie O2</p>
+                                        <p class="sub-part2">7 heures</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Poids</p>
+                                        <p class="sub-part2">30 kg Sur Terre</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Montant</p>
+                                        <p class="sub-part2">12 000$</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <a href="compte.html#commande"><button class="commande">Commander</button></a>
+
+                    </section>
+                </div>
+            </div>
+        </section>
+        <!-- Section Vaisseaux -->
+        <section class="ship">
+            <h2 id="vaisseau"> Vaisseaux</h2>
+            <p class="article categorie9 texte" data-section="ship">Navette</p>
+            <p class="article categorie10 texte" data-section="ship">Cargo</p>
+            <p class="article categorie11 texte" data-section="ship">Minier</p>
+            <p class="article categorie12 texte" data-section="ship">Station</p>
+            <div class="flex">
+                <div class="colone">
+                    <img class="article categorie9" src="image/navette.png" alt="Ship Navette" data-section="ship">
+                    <img class="article categorie10" src="image/ship2.png" alt="Ship Cargo" data-section="ship">
+                    <img class="article categorie11" src="image/minage.png" alt="Ship Minière" data-section="ship">
+                    <img class="article categorie12" src="image/station.png" alt="Station" data-section="ship">
+                    <div class="shadow"></div>
+                </div>
+                <div class="display">
+                    <aside class="buttons" data-section="ship">
+                        <button class="button" onclick="filterArticles('categorie9', 'ship')"
+                            class="active">Navette</button>
+                        <button class="button" onclick="filterArticles('categorie10', 'ship')"
+                            class="active">Cargo</button>
+                        <button class="button" onclick="filterArticles('categorie11', 'ship')">Minier</button>
+                        <button class="button" onclick="filterArticles('categorie12', 'ship')">Station</button>
+                    </aside>
+                    <section class="articles" data-section="ship">
+                        <div class="article categorie9" data-section="ship">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h3>Navette</h3>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Utilisation</p>
+                                        <p class="sub-part2">Espace / Toutes atomsphères</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Nombre de places</p>
+                                        <p class="sub-part2">10</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Energie</p>
+                                        <p class="sub-part2">Nucléaire</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Capacité de charge</p>
+                                        <p class="sub-part2">1 Tonne</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Montant</p>
+                                        <p class="sub-part2">90 000$</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="article categorie10" data-section="ship">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h3>Cargo</h3>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Utilisation</p>
+                                        <p class="sub-part2">Surface/ haute atomsphère</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Nombre de places</p>
+                                        <p class="sub-part2">5</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Energie</p>
+                                        <p class="sub-part2">Méthane</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Capacité de charge</p>
+                                        <p class="sub-part2">100 Tonnes</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Montant</p>
+                                        <p class="sub-part2">120 000$</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="article categorie11" data-section="ship">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h3>Minier</h3>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Utilisation</p>
+                                        <p class="sub-part2">Espace</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Nombre de places</p>
+                                        <p class="sub-part2">5</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Energie</p>
+                                        <p class="sub-part2">Méthane</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Capacité de charge</p>
+                                        <p class="sub-part2">50 Tonnes</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Montant</p>
+                                        <p class="sub-part2">150 000$</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="article categorie12" data-section="ship">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h3>Station</h3>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Utilisation</p>
+                                        <p class="sub-part2">Haute atomsphère</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Nombre de places</p>
+                                        <p class="sub-part2">100 Personnes</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Energie</p>
+                                        <p class="sub-part2">Nucléaire/ solaire</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sub-part">Capacité de stokage</p>
+                                        <p class="sub-part2">3 vaisseaux</p>
+                                    </td>
+                                    <td>
+                                        <p class="sub-part">Montant</p>
+                                        <p class="sub-part2">200 000$</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <a href="compte.html#commande"><button class="commande">Commander</button></a>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer du site -->
+    <footer>
+        <ul>
+            <li class="logo-div">
+                <img class="logo" src="image/logo.png" alt="logo">
+            </li>
+            <li>
+                <h4 class="logo-texte">Cosmo</h4>
+            </li>
+        </ul>
+        <ul>
+            <li class="texte-footer">
+                <h4>Coordonéer du siege</h4>
+                <p>Terre</p>
+                <p>Centre spacial de paris</p>
+                <p>N° 05 73 98 24 98</p>
+            </li>
+        </ul>
+        <ul>
+            <li class="texte-footer">
+                <h4>Produit</h4>
+                <p><a href="service.html">Service</a></p>
+                <p><a href="techno.html">Nos Téchnologie</a></p>
+                <p><a href="ship.html">Vaisseau</a></p>
+            </li>
+        </ul>
+        <ul>
+            <li class="texte-footer">
+                <h4>Contacte</h4>
+                <p>N°: 05 73 98 24 98</p>
+                <p>Email: zinj@heart.un</p>
+                <p>Réseau: @cosmo </p>
+            </li>
+        </ul>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/techno.js"></script>
+</body>
+</html>

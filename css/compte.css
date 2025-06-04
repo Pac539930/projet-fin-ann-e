@@ -1,0 +1,168 @@
+body {
+margin: 0;
+font-family: var(--font-texte);
+background: linear-gradient(135deg, rgb(84, 73, 55), rgb(255, 235, 205));  
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+h2{
+  font-size: 200%;
+}
+
+.container {
+  padding: 3px;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.top-section {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.profile-summary, .device-list {
+  background-color: rgb(129, 158, 157);
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgb(129, 158, 157);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+ td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #2f354d;
+}
+
+th {
+  padding: 12px;
+  text-align: left;
+  background-color: rgb(104, 139, 132);
+  color: rgb(84, 81, 81);
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+   h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+  }
+
+  form label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1em;
+  }
+
+  form button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border: none;
+    background-color: rgb(161, 143, 114);
+    color: white;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  form button:hover {
+    background-color:  rgb(255, 235, 205);
+    color: black;
+
+  }
+
+
+.payment{
+  text-align: center;
+}
+
+  .payment form {
+    background-color: rgb(84, 81, 81);
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .payment label {
+    display: block;
+    margin-top: 15px;
+  }
+
+  .payment input, select{
+    width: 45%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+  }
+
+  .payment button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .confirmation {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--color-success);
+    border-radius: 5px;
+    color: var(--seconde-color);
+  }
+
+  .return-button {
+    margin-top: 20px;
+    display: inline-block;
+    background-color: rgb(161, 143, 114);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  .return-button:hover {
+    background-color:  rgb(255, 235, 205);
+    color: black;
+  }
+
+footer{
+  background-color: black;
+}
+
+  @media (max-width: 400px) {
+    th {
+      padding: 8px;
+    }
+
+    .container {
+      margin-top: 0px;
+    }
+
+  }
