@@ -1,0 +1,160 @@
+body {
+    background-color: rgb(84, 81, 81);
+    color: var(--main-color);
+    font-family: var(--font-texte);
+
+    margin: 0;
+    width: 100%;
+}
+
+h1 {
+    font-family: var(--font-title); 
+    font-size: 7em;
+    padding-top: 3%;
+    padding-left: 3%;
+    margin: 0;
+    margin-bottom: 2%;
+}
+
+.infrastructure {
+    background: linear-gradient(135deg, rgb(84, 73, 55), rgb(255, 235, 205));
+    padding: 3%;
+    line-height: 0.8;
+    padding-bottom: 4%;
+}
+
+h2 {
+    font-family: var(--font-title); 
+    font-size: 5em;
+    line-height: 90px;
+    margin: 0;
+}
+
+.display {
+    margin-right: 20px;
+    min-width: 40%;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    padding: 5%;
+    padding-top: 1%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Adjusted to 100% for better responsiveness */
+}
+
+.commande {
+    border-radius: 5px;
+    padding: 5%;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button {
+    border-radius: 5px;
+    padding: 5%;
+    cursor: pointer;
+    width: 24%;
+}
+
+.articles {
+    background: linear-gradient(135deg, rgb(104, 139, 132), rgb(129, 158, 157));
+    border-radius: 5px;
+    text-align: left;
+    width: 100%; /* Adjusted to 100% for better responsiveness */
+}
+
+img {
+    width: 80%;
+}
+
+.shadow {
+    margin-top: 10px;
+    bottom: -15px; /* Position the shadow under the image */
+    width: 75%; /* Adjust the width of the shadow */
+    height: 20px; /* Height of the shadow */
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent shadow */
+    border-radius: 50%; /* Oval shape */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Soft and blurred shadow */
+}
+
+table {
+    width: 100%;
+    margin: 3%;
+}
+
+h3 {
+    font-size: 3vh;
+    margin: 0;    
+    font-family: var(--font-title); 
+}
+
+.texte {
+    margin: 2%;
+    font-size: 3em;
+}
+
+.combinaison, .ship {
+    padding: 2%;
+    line-height: 0.8;
+    padding-bottom: 4%;
+}
+
+.ship {
+    background: linear-gradient(135deg, rgb(84, 73, 55), rgb(255, 235, 205));
+}
+
+.sub-part {
+    font-size: 1em;
+    margin: 0;
+    line-height: 25px;
+}
+
+.sub-part2 {
+    margin: 0;
+    margin-bottom: 10%;
+}
+
+a {
+    width: 100%;
+}
+
+@media (max-width: 1002px) {
+    h1 {
+        font-size: 5em;
+    }
+
+    .flex {
+        flex-wrap: wrap;
+    }
+
+    .colone {
+        justify-items: center;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        padding: 0;
+        height: 50px;
+    }
+}
+
+@media (max-width: 535px) {
+    h1 {
+        font-size: 3em;
+        padding-top: 0;
+    }
+
+    h2 {
+        font-size: 4vh;
+    }
+
+    .texte {
+        font-size: 2em;
+    }
+}

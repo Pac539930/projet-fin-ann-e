@@ -1,0 +1,238 @@
+:root {
+  --main-color: #ffffff;
+  --seconde-color: blanchedalmond;
+  --font-title: 'naza';
+  --font-texte: 'FAMILY_NAME';
+}
+
+@font-face {
+  font-family: 'FAMILY_NAME';
+  src: url('../police/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf') format('woff2');
+}
+
+@font-face {
+  font-family: 'naza';
+  src: url('../police/nasalization.ttf') format('woff2');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: beige;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  animation: myAnim 1s ease 0s 1 normal forwards;
+  z-index: 10;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.main-nav.frosted {
+  background-color: black;
+  transition: backdrop-filter 0.3s, background-color 0.3s;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  max-height: 400px;
+}
+
+.main-nav {
+  z-index: 10;
+  animation: myAnim 2s ease 0s 1 normal forwards;
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  border-radius: 2rem;
+  border: solid 0.1rem rgba(255, 255, 255, 0.5);
+  box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+  margin-top: 2%;
+  padding: 1rem;
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.main-nav ul li {
+  position: relative;
+}
+
+.titre-nav {
+  color: var(--main-color);
+  padding: 0.6rem 1rem;
+  display: block;
+  font-size: 1.3em;
+}
+
+.sub-nav {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: solid 0.1rem rgba(255, 255, 255, 0.5);
+  box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 30vw;
+  min-height: 15vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.main-nav ul li:hover .sub-nav {
+  display: flex;
+}
+
+.titles {
+  margin: 0.3rem 0;
+  width: 100%;
+}
+
+.sub_titre-nav {
+  color: rgb(255, 255, 255);
+  font-family: var(--font-texte);
+  display: block;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background 0.3s;
+  text-align: left;
+}
+
+.img-nav {
+  width: clamp(120px, 20vw, 200px);
+  height: auto;
+}
+
+@keyframes myAnim {
+  0% {
+      opacity: 0;
+      transform: translateY(-25vh);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.menuburge {
+  display: none;
+  height: 100px;
+  width: 100px;
+}
+
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  width: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0;
+  gap: 1rem;
+}
+
+
+
+
+@media (max-width: 893px) {
+  .titre-nav {
+    font-size: 0.9em;      
+  }
+
+
+}
+
+@media (max-width: 500px) {
+  .titre-nav {
+    font-size: 2.4em;
+    text-align: center;
+    line-height: 2.5;
+  }
+
+
+  .burger {
+      display:block;
+  }
+  .main-nav {
+      display: none;
+      flex-direction: column;
+      padding: 1rem;
+  }
+  .main-nav.show-nav {
+      display: flex;
+  }
+  .nav-links {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 0;
+      gap: 1rem;
+  }
+  .sub-nav {
+      display: none !important;
+  }
+  .menuburge {
+      display: block;
+      width: 90px;
+      height: 90px;
+      background-image: url('../image/logo.png');
+      animation: spin 5s linear infinite;
+  }
+  @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+  }
+  .main-nav ul {
+      flex-direction: column;
+
+  }
+
+  .main-nav ul  li {
+    border-bottom: solid 2px white;
+    
+}
+  header {
+      margin-left: 0;
+      margin-right: 0;
+  }
+}
+

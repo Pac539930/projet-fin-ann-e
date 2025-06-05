@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/ship.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+CU:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="image/logo.png">
+    <title>Cosmo</title>
+</head>
+<body>
+    <header>
+        <img class="menuburge" src="image/logo.png" alt="">
+        <nav class="main-nav">
+            <ul>
+                <li><a class="titre-nav" href="index.html">Accueil</a></li>
+                <li>
+                    <a class="titre-nav" href="service.html">Nos Services</a>
+                    <div class="sub-nav">
+                        <div class="titles">
+                            <a href="service.html#satcom-id" class="sub_titre-nav"
+                                data-bg="image/satcom.webp">SatCom</a>
+                            <a href="service.html#spacecare-id" class="sub_titre-nav"
+                                data-bg="image/spacecare.jpg">SpaceCare</a>
+                            <a href="service.html#transport-id" class="sub_titre-nav"
+                                data-bg="image/transport.avif">Transport</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="titre-nav" href="techno.html">Nos Technologies</a>
+                    <div class="sub-nav">
+                        <div class="titles">
+                            <a href="techno.html#techno" class="sub_titre-nav" data-bg="image/equipement.jpg">Infrastructure</a>
+                            <a href="techno.html#combi" class="sub_titre-nav" data-bg="image/equipement.webp">Combinaison</a>
+                            <a href="techno.html#vaisseau" class="sub_titre-nav" data-bg="image/vaisseau.jpg">Vaisseau</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="titre-nav" href="ship.html">Nos Vaisseaux</a>
+                    <div class="sub-nav">
+                        <div class="titles">
+                            <a href="ship.html" class="sub_titre-nav" data-bg="image/rover.jpg">Rover</a>
+                            <a href="ship.html" class="sub_titre-nav" data-bg="image/sat-nav.webp">Satellite</a>
+                            <a href="ship.html" class="sub_titre-nav" data-bg="image/ship.webp">Lanceur</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a class="titre-nav" href="login.html">Connexion / Inscription</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Nos Ships</h1>
+        <p class="p-intro"> Nous repoussons les frontières de l'exploration spatiale avec notre flotte de véhicules
+            spatiaux de pointe. Chaque engin de notre collection est le résultat d'années de recherche et d'innovation,
+            garantissant sécurité, efficacité et performance exceptionnelles dans les conditions les plus extrêmes de
+            l'espace.</p>
+    </main>
+        <!-- === Section : Filtres de catégories === -->
+    <section>
+        <ul class="buttons-categorie">
+            <li class="animated-link">
+                <button class="tout-ship" id="bt-tout-cat" onclick="filterArticles('all')">Touts nos ship</button>
+            </li>
+            <li class="animated-link" onclick="filterArticles('rover')">
+                <img class="link-text text-top" src="image/rover.svg"></img>
+                <span class="link-text text-bottom">Rover</span>
+            </li>
+
+            <li class="animated-link" onclick="filterArticles('satellite')">
+                <img class="link-text text-top" src="image/satellite-svg.svg"></img>
+                <span class="link-text text-bottom">Satellite</span>
+            </li>
+
+            <li class="animated-link" onclick="filterArticles('ship')">
+                <img class="link-text text-top" src="image/space-ship.svg"></img>
+                <span class="link-text text-bottom">Lanceur</span>
+            </li>
+        </ul>
+    </section>
+    <section class="fond-etoile">
+        <div id="overlay" class="overlay" onclick="closeAllPopups()">
+            <!-- Popup: Perseverance Infos -->
+            <div id="popup-perseverance-info" class="popup" onclick="event.stopPropagation()">
+                <span class="close-btn" onclick="closeAllPopups()">✖</span>
+                <h3>Perseverance</h3>
+                <div class="display">
+                    <div class="flex">
+                        <img class="popup-img" src="image/perseverance2.jpg" alt="Perseverance Image 1">
+                        <img class="popup-img" src="image/Perseverance3.png" alt="Perseverance Image 2">
+                    </div>
+                    <div class="flex">
+                        <p class="detail">Que vous soyez explorateur, scientifique ou simplement passionné de
+                            technologie, le rover Perseverance est fait pour vous. Véritable icône de l’exploration
+                            spatiale, ce robot d’exception a déjà inspiré des générations de Terriens grâce à ses
+                            exploits sur la planète rouge. Robuste, intelligent, et un brin célèbre, Perseverance
+                            n’est pas seulement un engin d’exploration : c’est un compagnon de mission fiable et
+                            visionnaire, prêt à repousser les frontières de l’inconnu à vos côtés.</p>
+                        <ul>
+                            <li class="argument"><strong>Châssis blindé tout-terrain 6 roues</strong></li>
+                            <li class="argument"><strong>Caméras HD et SuperCam</strong></li>
+                            <li class="argument"><strong>Bras robotique multi-outils de précision</strong></li>
+                            <li class="argument"><strong>Système autonome d’intelligence artificielle</strong></li>
+                            <li class="argument"><strong>Mini-hélicoptère embarqué (Ingenuity)</strong></li>
+                        </ul>
+                        <div class="graphique">
+                            <div class="display">
+                                <div class="shema">
+                                    <h4>Vitesse</h4>
+                                    <img class="img-argument" src="image/kmh.png" alt="Vitesse Icon">
+                                    <p>20 Km/h</p>
+                                </div>
+                                <div class="shema">
+                                    <h4>Autonomie</h4>
+                                    <img class="img-argument" src="image/batterie.png" alt="Batterie Icon">
+                                    <p>48H Terrestre par charge</p>
+                                </div>
+                            </div>
+                            <div class="display">
+                                <div class="shema">
+                                    <h4>Capacité de charge</h4>
+                                    <img class="img-argument" src="image/charge.png" alt="Charge Icon">
+                                    <p>1 Tonne par module de charge</p>
+                                </div>
+                                <div class="shema">
+                                    <h4>Temps de latence</h4>
+                                    <img class="img-argument" src="image/resau.png" alt="Réseau Icon">
+                                    <p>0,3 sec pour ~ 1,775M de km</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h5>Prix</h5>
+                <p class="prix">35 000€</p>
+            </div>
+            <!-- Popup: Spirit Infos -->
+            <div id="popup-spirit-info" class="popup" onclick="event.stopPropagation()">
+                <span class="close-btn" onclick="closeAllPopups()">✖</span>
+                <h3>Spirit</h3>
+                <div class="display">
+                    <div class="flex">
+                        <img class="popup-img" src="image/spirit.jpg" alt="Spirit Image 1">
+                        <img class="popup-img" src="image/spirit2.jpg" alt="Spirit Image 2">
+                    </div>
+                    <div class="flex">
+                        <p class="detail">Que vous soyez rêveur d’étoiles, curieux de l’invisible ou pionnier dans
+                            l’âme, le rover Spirit est votre guide vers l’inconnu. Véritable pionnier de la surface
+                            martienne, ce héros discret mais déterminé a marqué l’histoire de l’exploration spatiale
+                            par sa résilience et son courage. Infatigable, ingénieux, et profondément inspirant,
+                            Spirit incarne l’audace de la découverte. Ce n’est pas juste un robot, c’est un
+                            éclaireur fidèle qui a su transformer le désert rouge en terrain d’exploration pour
+                            l’humanité.</p>
+                        <ul>
+                            <li class="argument"><strong>Châssis tout-terrain 6 roues</strong></li>
+                            <li class="argument"><strong>Caméras 4K</strong></li>
+                            <li class="argument"><strong>Bras robotique multi-outils</strong></li>
+                            <li class="argument"><strong>Système autonome d’intelligence artificielle</strong></li>
+                        </ul>
+                        <div class="graphique">
+                            <div class="display">
+                                <div class="shema">
+                                    <h4>Vitesse</h4>
+                                    <img class="img-argument" src="image/kmh.png" alt="Vitesse Icon">
+                                    <p>15 Km/h</p>
+                                </div>
+                                <div class="shema">
+                                    <h4>Autonomie</h4>
+                                    <img class="img-argument" src="image/batterie.png" alt="Batterie Icon">
+                                    <p>27 Heures Terrestres par charge</p>
+                                </div>
+                            </div>
+                            <div class="display">
+                                <div class="shema">
+                                    <h4>Capacité de charge</h4>
+                                    <img class="img-argument" src="image/charge.png" alt="Charge Icon">
+                                    <p>500 Kilos par module de charge</p>
+                                </div>
+                                <div class="shema">
+                                    <h4>Temps de latence</h4>
+                                    <img class="img-argument" src="image/resau.png" alt="Réseau Icon">
+                                    <p>0,7 seconde pour ~ 1,775M de km</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h5>Prix</h5>
+                <p class="prix">35 000€</p>
+            </div>
+            <!-- Popup: Arya Infos -->
+            <div id="popup-arya-info" class="popup" onclick="event.stopPropagation()">
+                <span class="close-btn" onclick="closeAllPopups()">✖</span>
+                <h3>Arya</h3>
+                <div class="display">
+                    <div class="flex">
+                        <img class="popup-img" src="image/toyota-rover.webp" alt="Arya Image 1">
+                        <img class="popup-img" src="image/toyota-rover2.webp" alt="Arya Image 2">
+                    </div>
+                    <div class="flex">
+                        <p class="detail">Arya est une avancée technologique impressionnante, ce véhicule
+                            tout-terrain, doté de moteurs solaires et d'une conception robuste, est prêt à affronter
+                            les conditions extrêmes de l'espace tout en offrant une grande autonomie et une
+                            efficacité énergétique. Conçu pour les missions spatiales de demain, notre rover en
+                            partenariat avec Toyota est l'un des véhicules les plus innovants du marché, alliant
+                            performance, autonomie et durabilité.</p>
+                        <ul>
+                            <li class="argument"><strong>Châssis tout-terrain 6 roues</strong></li>
+                            <li class="argument"><strong>Alimentation solaire</strong></li>
+                            <li class="argument"><strong>Suspension innovante</strong></li>
+                            <li class="argument"><strong>Capacité de transport jusqu'à 4 Tonnes</strong></li>
+                        </ul>
+                        <div class="graphique">
+                            <div class="display">
+                                <div class="shema">
+                                    <h4>Vitesse</h4>
+                                    <img class="img-argument" src="image/kmh.png" alt="Vitesse Icon">
+                                    <p>45 Km/h</p>
+                                </div>
+                                <div class="shema">
+                                    <h4>Autonomie</h4>
+                                    <img class="img-argument" src="image/batterie.png" alt="Batterie Icon">
+                                    <p>24 Heures Terrestres par charge</p>
+                                </div>
+                            </div>
+                            <div class="display">
+                                <div class="shema">
+                                    <h4>Capacité de charge</h4>
+                                    <img class="img-argument" src="image/charge.png" alt="Charge Icon">
+                                    <p>4 Tonnes</p>
+                                </div>
+                                <div class="shema">
+                                    <h4>Places équipage</h4>
+                                    <img class="img-argument"
+                                        src="image/astronaut-astronomy-galaxy-rocket-space-svgrepo-com.png"
+                                        alt="Astronaut Icon">
+                                    <p>Jusqu'à 8 astronautes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h5>Prix</h5>
+                <p class="prix">105 000€</p>
+            </div>
+            <!-- Popup: Hubbul Infos -->
+            <div id="popup-hubul-info" class="popup" onclick="event.stopPropagation()">
+                <span class="close-btn" onclick="closeAllPopups()">✖</span>
+                <h3>HubBule</h3>
+                <div class="display">
+                    <div class="flex">
+                        <img class="popup-img" src="image/hubbule2.jpg" alt="HubBule Image 1">
+                        <img class="popup-img" src="image/galaxie.jpg" alt="HubBule Image 2">
+                    </div>
+                    <div class="flex">
+                        <p class="detail">HubBule est une solution de pointe pour l'observation et la collecte de
+                            données en temps réel, conçue pour les missions spatiales les plus ambitieuses. Grâce à
+                            sa technologie avancée et son design aérodynamique, ce satellite est l'outil
+                            indispensable pour la surveillance de l'environnement spatial, les communications
+                            interplanétaires et la cartographie de planètes lointaines.</p>
+                        <ul>
+                            <li class="argument"><strong>Technologie de communication haut débit</strong></li>
+                            <li class="argument"><strong>Alimentation solaire</strong></li>
+                            <li class="argument"><strong>Capteurs avancés</strong></li>
+                            <li class="argument"><strong>Applications multiples</strong></li>
+                        </ul>
+                        <div class="graphique">
+                            <div class="display">
+                                <div class="shema">
+                                    <h4>Vitesse</h4>
+                                    <img class="img-argument" src="image/kmh.png" alt="Vitesse Icon">
+                                    <p>45 Km/h</p>
+                                </div>
+                                <div class="shema">
+                                    <h4>Autonomie</h4>
+                                    <img class="img-argument" src="image/batterie.png" alt="Batterie Icon">
+                                    <p>24 Heures Terrestres par charge</p>
+                                </div>
+                            </div>
+                            <div class="display">
+                                <div class="shema">
+                                    <h4>Capacité de charge</h4>
+                                    <img class="img-argument" src="image/charge.png" alt="Charge Icon">
+                                    <p>4 Tonnes</p>
+                                </div>
+                                <div class="shema">
+                                    <h4>Places équipage</h4>
+                                    <img class="img-argument"
+                                        src="image/astronaut-astronomy-galaxy-rocket-space-svgrepo-com.png"
+                                        alt="Astronaut Icon">
+                                    <p>Jusqu'à 8 astronautes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h5>Prix</h5>
+                <p class="prix">105 000€</p>
+            </div>
+            <!-- Popup ares -->
+            <div id="popup-ares-info" class="popup" onclick="event.stopPropagation()">
+                <span class="close-btn" onclick="closeAllPopups()">✖</span>
+                <h3>Ares</h3>
+                <div class="display">
+                    <div class="flex">
+                        <img class="img-produit" src="image/sat2.webp" alt="satelite ares image">
+                        <img class="popup-img" src="image/constru.jpg" alt="Labo de construction">
+                    </div>
+                    <div class="flex">
+                        <p class="detail">
+                            Ares est un satellite de communication de nouvelle génération conçu pour assurer des
+                            connexions stables et rapides entre les stations orbitales, les bases planétaires et les
+                            vaisseaux interstellaires. Grâce à sa portée étendue et à ses systèmes de relais
+                            autonomes, HubCom garantit une liaison ininterrompue dans les environnements les plus
+                            extrêmes de l’espace.
+                        </p>
+                        <ul>
+                            <li class="argument"><strong>Relais interplanétaire autonome</strong></li>
+                            <li class="argument"><strong>Cryptage quantique sécurisé</strong></li>
+                            <li class="argument"><strong>Interface IA d’optimisation de signal</strong></li>
+                            <li class="argument"><strong>Résistance aux perturbations électromagnétiques</strong>
+                            </li>
+                        </ul>
+                        <div class="graphique">
+                            <div class="display">
+                                <div class="shema">
+                                    <h4>Portée</h4>
+                                    <img class="img-argument" src="image/galaxy.gif" alt="Portée Icon">
+                                    <p>Jusqu’à 300 millions de km</p>
+                                </div>
+                                <div class="shema">
+                                    <h4>Autonomie</h4>
+                                    <img class="img-argument" src="image/batterie.png" alt="Batterie Icon">
+                                    <p>120 jours par cycle solaire</p>
+                                </div>
+                            </div>
+                            <div class="display">
+                                <div class="shema">
+                                    <h4>Bande passante</h4>
+                                    <img class="img-argument" src="image/resau.png" alt="Signal Icon">
+                                    <p>80 Gbps</p>
+                                </div>
+                                <div class="shema">
+                                    <h4>Stabilisation</h4>
+                                    <img class="img-argument" src="image/stabiliter.png" alt="Stabilisation Icon">
+                                    <p>Gyroscopique triple-axe</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h5>Prix</h5>
+                <p class="prix">350 000€</p>
+            </div>
+            <!-- Popup :Voyageur-->
+            <div id="popup-voyageur-info" class="popup" onclick="event.stopPropagation()">
+                <span class="close-btn" onclick="closeAllPopups()">✖</span>
+                <h3>Voyageur</h3>
+                <div class="display">
+                    <div class="flex">
+                        <img class="img-produit" src="image/sat3.webp" alt="satelite voyageur image">
+                        <img class="popup-img" src="image/constru.jpg" alt="Labo de construction">
+                    </div>
+                    <div class="flex">
+                        <p class="detail">
+                            Voyageur est un satellite d’observation de haute précision dédié à la cartographie
+                            topographique, l’analyse atmosphérique et la détection thermique à distance. Il
+                            constitue une plateforme essentielle pour la planification de missions, la sélection de
+                            sites d’atterrissage et la recherche scientifique avancée.
+                        </p>
+                        <ul>
+                            <li class="argument"><strong>Capteurs multispectraux (UV/IR/Thermique)</strong></li>
+                            <li class="argument"><strong>Topographie 3D haute résolution</strong></li>
+                            <li class="argument"><strong>Scan orbital complet toutes les 6h</strong></li>
+                            <li class="argument"><strong>Compatible avec bases planétaires</strong></li>
+                        </ul>
+                        <div class="graphique">
+                            <div class="display">
+                                <div class="shema">
+                                    <h4>Résolution</h4>
+                                    <img class="img-argument" src="image/resolution.png" alt="Résolution Icon">
+                                    <p>0.25 m/pixel</p>
+                                </div>
+                                <div class="shema">
+                                    <h4>Durée en orbite</h4>
+                                    <img class="img-argument" src="image/batterie.png" alt="Orbital Icon">
+                                    <p>Jusqu’à 5 ans</p>
+                                </div>
+                            </div>
+                            <div class="display">
+                                <div class="shema">
+                                    <h4>Vitesse de rotation</h4>
+                                    <img class="img-argument" src="image/speed.svg" alt="Vitesse Icon">
+                                    <p>90 min / orbite</p>
+                                </div>
+                                <div class="shema">
+                                    <h4>Mémoire embarquée</h4>
+                                    <img class="img-argument" src="image/ram.png" alt="Ram Icon">
+                                    <p>128 To SSD renforcé</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h5>Prix</h5>
+                <p class="prix">280 000€</p>
+            </div>
+            <!-- Popup: Ariane Infos -->
+            <div id="popup-ariane-info" class="popup" onclick="event.stopPropagation()">
+                <span class="close-btn" onclick="closeAllPopups()">✖</span>
+                <div class="display">
+                    <h3 class="titre-lanceur">Ariane</h3>
+                    <img class="popup-img-lanceur" src="image/ariane6.png" alt="Ariane Image">
+                    <div class="">
+                        <p class="detail-lanceur">Ariane est un lanceur de pointe. Nous l'avons équipée d'un système
+                            de lancement flexible qui permet de s'adapter à diverses configurations de charges
+                            utiles. Notre lanceur de nouvelle génération a été conçu pour offrir des solutions de
+                            lancement plus compétitives et flexibles, tout en maintenant des standards de sécurité
+                            et de performance de haut niveau pour le transport de satellites dans l'espace.</p>
+                        <ul>
+                            <li class="argument"><strong>Boosteur modulable</strong></li>
+                            <li class="argument"><strong>Moteur à propulsion liquide Vulcain pour une meilleure
+                                    efficacité de lancement.</strong></li>
+                            <li class="argument"><strong>Propulseurs d’appoint pour les manœuvres délicates</strong>
+                            </li>
+                            <li class="argument"><strong>Capteurs avancés</strong></li>
+                        </ul>
+                        <div class="graphique">
+                        </div>
+                    </div>
+                </div>
+                <div class="display">
+                    <div class="shema">
+                        <h4>Capacité en orbite basse</h4>
+                        <img class="img-argument" src="image/launch.gif" alt="Launch Icon">
+                        <p>Jusqu’à 22 000 kg</p>
+                    </div>
+                    <div class="shema">
+                        <h4>Capacité en orbite géostationnaire</h4>
+                        <img class="img-argument" src="image/galaxy.gif" alt="Galaxy Icon">
+                        <p>21 500 kg</p>
+                    </div>
+                    <div class="shema">
+                        <h4>Capacité de lancement</h4>
+                        <img class="img-argument" src="image/batterie.png" alt="Batterie Icon">
+                        <p>2 par jour</p>
+                    </div>
+                </div>
+                <h5>Prix</h5>
+                <p class="prix">70 millions €</p>
+            </div>
+            <!-- Popup: Blue Origin Infos -->
+            <div id="popup-saturne-info" class="popup" onclick="event.stopPropagation()">
+                <span class="close-btn" onclick="closeAllPopups()">✖</span>
+                <div class="display">
+                    <h3 class="titre-lanceur">New Glenn</h3>
+                    <img class="popup-img-lanceur" src="image/blueorigin.png" alt="Image Saturne">
+                    <div>
+                        <p class="detail-lanceur">
+                            La Saturne est conçue pour révolutionner les lancements orbitaux grâce à son premier
+                            étage réutilisable et ses performances de transport exceptionnelles. Dotée d’une coiffe
+                            extra-large et d’un étage principal alimenté par les moteurs BE-4 à méthane liquide.
+                            Saturne propose une solution puissante, économique et respectueuse des nouvelles normes
+                            environnementales du secteur spatial.
+                        </p>
+                        <ul>
+                            <li class="argument"><strong>Premier étage réutilisable jusqu’à 25 fois</strong></li>
+                            <li class="argument"><strong>Propulsion BE-4 au méthane liquide et oxygène
+                                    liquide</strong></li>
+                            <li class="argument"><strong>Coiffe de 7 mètres de diamètre</strong></li>
+                            <li class="argument"><strong>Capacité cargo ou équipage (avec module adapté)</strong>
+                            </li>
+                        </ul>
+                        <div class="graphique"></div>
+                    </div>
+                </div>
+                <div class="display">
+                    <div class="shema">
+                        <h4>Capacité en orbite basse</h4>
+                        <img class="img-argument" src="image/launch.gif" alt="Launch Icon">
+                        <p>45 000 kg</p>
+                    </div>
+                    <div class="shema">
+                        <h4>Capacité en orbite géostationnaire</h4>
+                        <img class="img-argument" src="image/galaxy.gif" alt="Galaxy Icon">
+                        <p>13 000 kg</p>
+                    </div>
+                    <div class="shema">
+                        <h4>Fréquence de lancement</h4>
+                        <img class="img-argument" src="image/batterie.png" alt="Fréquence Icon">
+                        <p>Jusqu’à 1 par semaine</p>
+                    </div>
+                </div>
+                <h5>Prix</h5>
+                <p class="prix">60 millions €</p>
+            </div>
+        </div>
+        <div class="articles">
+            <!-- PRODUIT 1 -->
+            <div class="produit rover">
+                <h2>Perseverance</h2>
+                <img class="img-produit" src="image/Perseverance-2-Photoroom.png" alt="rover image">
+                <div class="buttons">
+                    <button onclick="openPopup('popup-perseverance-info')">En savoir plus</button>
+                    <a href="compte.html#commande"><button>Commander</button></a>
+                </div>
+            </div>
+            <!-- PRODUIT 2 -->
+            <div class="produit rover">
+                <h2>Spirit</h2>
+                <img class="img-produit" src="image/spirit-rover.png" alt="rover image">
+                <div class="buttons">
+                    <button onclick="openPopup('popup-spirit-info')">En savoir plus</button>
+                    <a href="compte.html#commande"><button>Commander</button></a>
+                </div>
+            </div>
+            <!-- PRODUIT 3 -->
+            <div class="produit rover">
+                <h2>Arya</h2>
+                <img class="img-produit" src="image/rover3.png" alt="rover image">
+                <div class="buttons">
+                    <button onclick="openPopup('popup-arya-info')">En savoir plus</button>
+                    <a href="compte.html#commande"><button>Commander</button></a>
+                </div>
+            </div>
+            <!-- PRODUIT 4 -->
+            <div class="produit satellite">
+                <h2>Hubbul</h2>
+                <img class="img-produit" src="image/hubble1.png" alt="satelite Hubbul image">
+                <div class="buttons">
+                    <button onclick="openPopup('popup-hubul-info')">En savoir plus</button>
+                    <a href="compte.html#commande"><button>Commander</button></a>
+                </div>
+            </div>
+            <!-- PRODUIT 5 -->
+            <div class="produit satellite">
+                <h2>Ares</h2>
+                <img class="img-produit" src="image/sat2.webp" alt="satelite ares image">
+                <div class="buttons">
+                    <button onclick="openPopup('popup-ares-info')">En savoir plus</button>
+                    <a href="compte.html#commande"><button>Commander</button></a>
+                </div>
+            </div>
+            <!-- PRODUIT 6 -->
+            <div class="produit satellite">
+                <h2>Voyageur</h2>
+                <img class="img-produit" src="image/sat3.webp" alt="satelite voyageur image">
+                <div class="buttons">
+                    <button onclick="openPopup('popup-voyageur-info')">En savoir plus</button>
+                    <a href="compte.html#commande"><button>Commander</button></a>
+                </div>
+            </div>
+            <!-- PRODUIT 7 -->
+            <div class="produit ship">
+                <h2>Ariane V6</h2>
+                <img class="img-produit" src="image/ariane.webp" alt="Fuser image">
+                <div class="buttons">
+                    <button onclick="openPopup('popup-ariane-info')">En savoir plus</button>
+                    <a href="compte.html#commande"><button>Commander</button></a>
+                </div>
+            </div>
+            <!-- PRODUIT 8 -->
+            <div class="produit ship">
+                <h2>Saturne V4</h2>
+                <img class="img-produit" src="image/blueorigin.png" alt="Fuser image">
+                <div class="buttons">
+                    <button onclick="openPopup('popup-saturne-info')">En savoir plus</button>
+                    <a href="compte.html#commande"><button>Commander</button></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Footer du site -->
+
+    <footer>
+        <ul>
+            <li class="logo-div">
+                <img class="logo" src="image/logo.png" alt="logo">
+            </li>
+            <li>
+                <h4 class="logo-texte">Cosmo</h4>
+            </li>
+        </ul>
+        <ul>
+            <li class="texte-footer">
+                <h4>Coordonéer du siege</h4>
+                <p>Terre</p>
+                <p>Centre spacial de paris</p>
+                <p>N° 05 73 98 24 98</p>
+            </li>
+        </ul>
+        <ul>
+            <li class="texte-footer">
+                <h4>Produit</h4>
+                <p><a href="service.html">Service</a></p>
+                <p><a href="techno.html">Nos Téchnologie</a></p>
+                <p><a href="ship.html">Vaisseau</a></p>
+            </li>
+        </ul>
+        <ul>
+            <li class="texte-footer">
+                <h4>Contacte</h4>
+                <p>N°: 05 73 98 24 98</p>
+                <p>Email: zinj@heart.un</p>
+                <p>Réseau: @cosmo </p>
+            </li>
+        </ul>
+    </footer>
+</body>
+<script src="js/ship.js"></script>
+</html>

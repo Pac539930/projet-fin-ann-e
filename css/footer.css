@@ -1,0 +1,41 @@
+footer{
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    border-top: solid 1px white;
+}
+
+footer ul{
+    list-style: none;
+    padding: 0%;
+}
+
+.logo{
+    height: 150px;
+}
+
+h4{
+    font-size: 1.5rem;
+    color: var(--main-color);
+    text-align: center;
+}
+
+.logo-texte{
+    margin: 0%;
+}
+
+.texte-footer{
+    text-align: left;
+}
+
+@media (max-width: 750px) {
+
+footer{
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-content: space-around
+}
+.logo-texte{
+    display: none;
+    }
+}

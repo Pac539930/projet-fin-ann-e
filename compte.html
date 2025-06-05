@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/compte.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+CU:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="image/logo.png">
+  <title>Cosmo</title>
+<body>
+  <header>
+    <img class="menuburge" src="image/logo.png" alt="">
+    <nav class="main-nav">
+        <ul>
+            <li><a class="titre-nav" href="index.html">Accueil</a></li>
+            <li>
+                <a class="titre-nav" href="service.html">Nos Services</a>
+                <div class="sub-nav">
+                    <div class="titles">
+                        <a href="service.html#satcom-id" class="sub_titre-nav"
+                            data-bg="image/satcom.webp">SatCom</a>
+                        <a href="service.html#spacecare-id" class="sub_titre-nav"
+                            data-bg="image/spacecare.jpg">SpaceCare</a>
+                        <a href="service.html#transport-id" class="sub_titre-nav"
+                            data-bg="image/transport.avif">Transport</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a class="titre-nav" href="techno.html">Nos Technologies</a>
+                <div class="sub-nav">
+                    <div class="titles">
+                        <a href="techno.html#techno" class="sub_titre-nav" data-bg="image/equipement.jpg">Infrastructure</a>
+                        <a href="techno.html#combi" class="sub_titre-nav" data-bg="image/equipement.webp">Combinaison</a>
+                        <a href="techno.html#vaisseau" class="sub_titre-nav" data-bg="image/vaisseau.jpg">Vaisseau</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a class="titre-nav" href="ship.html">Nos Vaisseaux</a>
+                <div class="sub-nav">
+                    <div class="titles">
+                        <a href="ship.html" class="sub_titre-nav" data-bg="image/rover.jpg">Rover</a>
+                        <a href="ship.html" class="sub_titre-nav" data-bg="image/sat-nav.webp">Satellite</a>
+                        <a href="ship.html" class="sub_titre-nav" data-bg="image/ship.webp">Lanceur</a>
+                    </div>
+                </div>
+            </li>
+            <li><a class="titre-nav" href="login.html">Connexion / Inscription</a></li>
+        </ul>
+    </nav>
+</header>
+  <section class="container">
+    <div class="top-section">
+      <div class="profile-summary">
+        <h3>Résumé du Profil</h3>
+        <p><strong>Nom :</strong> Jean Dupont</p>
+        <p><strong>Email :</strong> jean.dupont@example.com</p>
+        <p><strong>Inscription :</strong> 12 mars 2024</p>
+        <p><strong>Statut :</strong> Client Premium</p>
+      </div>
+      <div class="device-list">
+        <h3>Appareils Possédés</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Nom de l'appareil</th>
+              <th>Date d'achat</th>
+              <th>N° de série</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Combinaison planetaire v2</td>
+              <td>05/02/2024</td>
+              <td>#DREX1-32892</td>
+            </tr>
+            <tr>
+              <td>Navette</td>
+              <td>22/11/2023</td>
+              <td>#SCMK4-11245</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="section flights">
+      <h3>Vols Réservés</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Destination</th>
+            <th>Date</th>
+            <th>Vol</th>
+            <th>Statut</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Station Mars Alpha</td>
+            <td>19/05/2025</td>
+            <td>MX-001</td>
+            <td>Confirmé</td>
+          </tr>
+          <tr>
+            <td>Colonie Titan</td>
+            <td>23/06/2025</td>
+            <td>NEB-402</td>
+            <td>En attente</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="section orders">
+      <h3>Commandes Passées</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Produit</th>
+            <th>Quantité</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>22/11/2023</td>
+            <td>Combinaison planetaire v2</td>
+            <td>3</td>
+            <td>6 800 €</td>
+          </tr>
+          <tr>
+            <td>05/02/2024</td>
+            <td>Navette</td>
+            <td>1</td>
+            <td>1 500 €</td>
+          </tr>
+          <tr>
+            <td>08/02/2022</td>
+            <td>Transport Terre - Mars</td>
+            <td>2 Passager</td>
+            <td>1 500 €</td>
+          </tr>
+          <tr>
+            <td>01/02/2024</td>
+            <td>Transport Mars - Terre</td>
+            <td>1 Passager</td>
+            <td>900€</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <section class="payment">
+    <h2 id="commande">Passer une commande</h2>
+    <form id="paymentForm">
+      <label for="method">Type de produit</label>
+      <select id="method" required>
+        <option value="">Type de produit</option>
+        <option value="Rovre">Rovre</option>
+        <option value="Satellite">Satellite</option>
+        <option value="Lanceur">Lanceur</option>
+        <option value="Vaisseau">Vaisseau</option>
+        <option value="Batiment">Batiment</option>
+      </select>
+      <label for="method">Planète de destination</label>
+      <select id="method" required>
+        <option value="">-- Choisir une planète --</option>
+        <option value="mercure">Mercure</option>
+        <option value="venus">Vénus</option>
+        <option value="terre">Terre</option>
+        <option value="mars">Mars</option>
+        <option value="jupiter">Jupiter</option>
+        <option value="saturne">Saturne</option>
+        <option value="uranus">Uranus</option>
+        <option value="neptune">Neptune</option>
+        <option value="pluton">Pluton</option>
+      </select>
+      <label for="name">Adresse de livraison</label>
+      <input type="text" id="name" placeholder="8 rue de la lune  ">
+      <label for="card">Nom du produit</label>
+      <input type="text" id="card" placeholder="Nom du produit">
+      <label for="card">Numéro de carte</label>
+      <input type="text" id="card" placeholder="XXXX XXXX XXXX XXXX">
+      <label for="name">Nom sur la carte</label>
+      <input type="text" id="name" placeholder="Jean Dupont">
+      <label for="expiry">Date d'expiration</label>
+      <input type="text" id="expiry" placeholder="MM/AA">
+      <label for="cvv">Code CVV</label>
+      <input type="text" id="cvv" placeholder="123">
+      <br>
+      <button type="submit">Payer</button>
+      <div id="confirmation" class="confirmation">
+        ✅ Paiement effectué avec succès ! Merci pour votre commande.
+      </div>
+      <a href="index.html" class="return-button">Retour à l'accueil</a>
+    </form>
+  </section>
+  </div>
+  </div>
+  <footer>
+    <ul>
+      <li class="logo-div">
+        <img class="logo" src="image/logo.png" alt="logo">
+      </li>
+      <li>
+        <h4 class="logo-texte">Cosmo</h4>
+      </li>
+    </ul>
+    <ul>
+      <li class="texte-footer">
+        <h4>Coordonéer du siege</h4>
+        <p>Terre</p>
+        <p>Centre spacial de paris</p>
+        <p>N° 05 73 98 24 98</p>
+      </li>
+    </ul>
+    <ul>
+      <li class="texte-footer">
+        <h4>Produit</h4>
+        <p><a href="service.html">Service</a></p>
+        <p><a href="techno.html">Nos Téchnologie</a></p>
+        <p><a href="ship.html">Vaisseau</a></p>
+      </li>
+    </ul>
+    <ul>
+      <li class="texte-footer">
+        <h4>Contacte</h4>
+        <p>N°: 05 73 98 24 98</p>
+        <p>Email: zinj@heart.un</p>
+        <p>Réseau: @cosmo </p>
+      </li>
+    </ul>
+  </footer>
+</body>
+<script src="js/main.js"></script>
+<script src="js/compte.js"></script>
+</html>

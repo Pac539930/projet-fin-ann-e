@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/transport.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+CU:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="image/logo.png">
+  <title>Cosmo</title>
+</head>
+<body>
+  <header>
+    <img class="menuburge" src="image/logo.png" alt="">
+    <nav class="main-nav">
+        <ul>
+            <li><a class="titre-nav" href="index.html">Accueil</a></li>
+            <li>
+                <a class="titre-nav" href="service.html">Nos Services</a>
+                <div class="sub-nav">
+                    <div class="titles">
+                        <a href="service.html#satcom-id" class="sub_titre-nav"
+                            data-bg="image/satcom.webp">SatCom</a>
+                        <a href="service.html#spacecare-id" class="sub_titre-nav"
+                            data-bg="image/spacecare.jpg">SpaceCare</a>
+                        <a href="service.html#transport-id" class="sub_titre-nav"
+                            data-bg="image/transport.avif">Transport</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a class="titre-nav" href="techno.html">Nos Technologies</a>
+                <div class="sub-nav">
+                    <div class="titles">
+                        <a href="techno.html#techno" class="sub_titre-nav" data-bg="image/equipement.jpg">Infrastructure</a>
+                        <a href="techno.html#combi" class="sub_titre-nav" data-bg="image/equipement.webp">Combinaison</a>
+                        <a href="techno.html#vaisseau" class="sub_titre-nav" data-bg="image/vaisseau.jpg">Vaisseau</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a class="titre-nav" href="ship.html">Nos Vaisseaux</a>
+                <div class="sub-nav">
+                    <div class="titles">
+                        <a href="ship.html" class="sub_titre-nav" data-bg="image/rover.jpg">Rover</a>
+                        <a href="ship.html" class="sub_titre-nav" data-bg="image/sat-nav.webp">Satellite</a>
+                        <a href="ship.html" class="sub_titre-nav" data-bg="image/ship.webp">Lanceur</a>
+                    </div>
+                </div>
+            </li>
+            <li><a class="titre-nav" href="login.html">Connexion / Inscription</a></li>
+        </ul>
+    </nav>
+</header>
+    <!-- =======================
+       TABLEAU DES VOLS
+  ======================== -->
+  <table>
+    <thead>
+      <tr>
+        <th>Vol</th>
+        <th>Destination</th>
+        <th>Départ</th>
+        <th>Quai</th>
+        <th>Statut</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>MX-001</td>
+        <td>Station Mars Alpha</td>
+        <td>12:45</td>
+        <td>B12</td>
+        <td class="status on-time">À l'heure</td>
+      </tr>
+      <tr>
+        <td>NEB-402</td>
+        <td>Colonie Titan</td>
+        <td>13:20</td>
+        <td>C7</td>
+        <td class="status delayed">Retardé</td>
+      </tr>
+      <tr>
+        <td>OR-998</td>
+        <td>Lune - Base Lunaire 3</td>
+        <td>11:30</td>
+        <td>A4</td>
+        <td class="status departed">Parti</td>
+      </tr>
+      <tr>
+        <td>VRS-713</td>
+        <td>Orbite de Vénus</td>
+        <td>14:05</td>
+        <td>D2</td>
+        <td class="status on-time">À l'heure</td>
+      </tr>
+    </tbody>
+  </table>
+    <!-- === SYSTÈME SOLAIRE INTERACTIF === -->
+  <div class="container">
+    <div class="solar-system" id="solarSystem">
+      <div class="sun"></div>
+      <div class="planet-orbit mercure">
+        <div class="planet mercure"></div>
+      </div>
+      <div class="planet-orbit venus">
+        <div class="planet venus"></div>
+      </div>
+      <div class="planet-orbit terre">
+        <div class="planet terre"></div>
+      </div>
+      <div class="planet-orbit mars">
+        <div class="planet mars"></div>
+      </div>
+      <div class="planet-orbit jupiter">
+        <div class="planet jupiter"></div>
+      </div>
+      <div class="planet-orbit saturne">
+        <div class="planet saturne"></div>
+      </div>
+      <div class="planet-orbit uranus">
+        <div class="planet uranus"></div>
+      </div>
+      <div class="planet-orbit neptune">
+        <div class="planet neptune"></div>
+      </div>
+    </div>
+    <!-- === FORMULAIRE DE RÉSERVATION === -->
+    <div class="form-panel">
+      <h2>Choisissez un type de transport</h2>
+      <label>Voyage de passagers<input type="radio" name="mode" value="voyage" checked> </label>
+      <label>Transport de fret<input type="radio" name="mode" value="fret"> </label>
+        <!-- Formulaire Voyage -->
+      <div id="formVoyage">
+        <form id="bookingForm">
+          <label>Départ :
+            <select id="depart">
+              <option value="">--Sélectionner--</option>
+              <option>Mercure</option>
+              <option>Vénus</option>
+              <option>Terre</option>
+              <option>Mars</option>
+              <option>Jupiter</option>
+              <option>Saturne</option>
+              <option>Uranus</option>
+              <option>Neptune</option>
+            </select>
+          </label>
+          <label>Destination :
+            <select id="destination">
+              <option value="">--Sélectionner--</option>
+              <option>Mercure</option>
+              <option>Vénus</option>
+              <option>Terre</option>
+              <option>Mars</option>
+              <option>Jupiter</option>
+              <option>Saturne</option>
+              <option>Uranus</option>
+              <option>Neptune</option>
+            </select>
+          </label>
+          <label>Passagers :
+            <input type="number" id="passengers" min="1" value="1">
+          </label>
+          <div id="passenger-names"></div>
+          <label>Email : <input type="email" id="email" required></label>
+          <label>Téléphone : <input type="tel" id="phone" required></label>
+          <label>Bagages en soute :
+            <select id="bagage">
+              <option value="">--Sélectionner--</option>
+              <option value="non">Non</option>
+              <option value="oui">Oui</option>
+            </select>
+          </label>
+          <div id="bagage-poids-container" class="hidden">
+            <label>Poids total (kg) : <input type="number" id="poids"></label>
+          </div>
+
+          <div class="container">
+            <p>Aller-retour</p>
+            <label><input type="checkbox" id="allerRetour"></label>
+          </div>
+          <p id="price">Prix total : 500 €</p>
+          <button type="submit">Réserver mon voyage</button>
+        </form>
+        <div class="summary" id="summary"></div>
+      </div>
+      <!-- Formulaire Fret -->
+      <div id="formFret" class="hidden">
+        <form id="freightForm">
+          <label>Départ :
+            <select id="fret-depart">
+              <option value="">--Sélectionner--</option>
+              <option>Mercure</option>
+              <option>Vénus</option>
+              <option>Terre</option>
+              <option>Mars</option>
+              <option>Jupiter</option>
+              <option>Saturne</option>
+              <option>Uranus</option>
+              <option>Neptune</option>
+            </select>
+          </label>
+          <label>Destination :
+            <select id="fret-destination">
+              <option value="">--Sélectionner--</option>
+              <option>Mercure</option>
+              <option>Vénus</option>
+              <option>Terre</option>
+              <option>Mars</option>
+              <option>Jupiter</option>
+              <option>Saturne</option>
+              <option>Uranus</option>
+              <option>Neptune</option>
+            </select>
+          </label>
+          <label>Poids du fret (kg) : <input type="number" id="fret-weight" min="1"></label>
+          <label>Description du contenu : <textarea id="fret-desc" rows="3">Déscription</textarea></label>
+          <p id="fret-price">Prix estimé : 0 €</p>
+          <button type="submit">Réserver le transport</button>
+        </form>
+        <div class="summary" id="fret-summary"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer du site -->
+  <footer>
+    <ul>
+      <li class="logo-div">
+        <img class="logo" src="image/logo.png" alt="logo">
+      </li>
+      <li>
+        <h4 class="logo-texte">Cosmo</h4>
+      </li>
+    </ul>
+    <ul>
+      <li class="texte-footer">
+        <h4>Coordonéer du siege</h4>
+        <p>Terre</p>
+        <p>Centre spacial de paris</p>
+        <p>N° 05 73 98 24 98</p>
+      </li>
+    </ul>
+    <ul>
+      <li class="texte-footer">
+        <h4>Produit</h4>
+        <p><a href="service.html">Service</a></p>
+        <p><a href="techno.html">Nos Téchnologie</a></p>
+        <p><a href="ship.html">Vaisseau</a></p>
+      </li>
+    </ul>
+    <ul>
+      <li class="texte-footer">
+        <h4>Contacte</h4>
+        <p>N°: 05 73 98 24 98</p>
+        <p>Email: zinj@heart.un</p>
+        <p>Réseau: @cosmo </p>
+      </li>
+    </ul>
+  </footer>
+
+
+
+  <script src="js/transport.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

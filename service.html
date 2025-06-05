@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/service.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="image/logo.png">
+    <title>Cosmo</title>
+</head>
+<body>
+    <header>
+        <img class="menuburge" src="image/logo.png" alt="">
+        <nav class="main-nav">
+            <ul>
+                <li><a class="titre-nav" href="index.html">Accueil</a></li>
+                <li>
+                    <a class="titre-nav" href="service.html">Nos Services</a>
+                    <div class="sub-nav">
+                        <div class="titles">
+                            <a href="service.html#satcom-id" class="sub_titre-nav"
+                                data-bg="image/satcom.webp">SatCom</a>
+                            <a href="service.html#spacecare-id" class="sub_titre-nav"
+                                data-bg="image/spacecare.jpg">SpaceCare</a>
+                            <a href="service.html#transport-id" class="sub_titre-nav"
+                                data-bg="image/transport.avif">Transport</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="titre-nav" href="techno.html">Nos Technologies</a>
+                    <div class="sub-nav">
+                        <div class="titles">
+                            <a href="techno.html#techno" class="sub_titre-nav" data-bg="image/equipement.jpg">Infrastructure</a>
+                            <a href="techno.html#combi" class="sub_titre-nav" data-bg="image/equipement.webp">Combinaison</a>
+                            <a href="techno.html#vaisseau" class="sub_titre-nav" data-bg="image/vaisseau.jpg">Vaisseau</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="titre-nav" href="ship.html">Nos Vaisseaux</a>
+                    <div class="sub-nav">
+                        <div class="titles">
+                            <a href="ship.html" class="sub_titre-nav" data-bg="image/rover.jpg">Rover</a>
+                            <a href="ship.html" class="sub_titre-nav" data-bg="image/sat-nav.webp">Satellite</a>
+                            <a href="ship.html" class="sub_titre-nav" data-bg="image/ship.webp">Lanceur</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a class="titre-nav" href="login.html">Connexion / Inscription</a></li>
+            </ul>
+        </nav>
+    </header>
+      <!-- === Nav des Services === -->
+    <main class="info-service">
+        <a href="#satcom-id">
+            <article class="com">
+                <div class="display">
+                    <img src="image/com-logo.png" alt="SatCom logo">
+                    <h2>SatCom</h2>
+                </div>
+            </article>
+        </a>
+        <a href="#spacecare-id">
+            <article class="care">
+                <div class="display">
+                    <img src="image/spcare-logo.png" alt="SpaceCare logo">
+                    <h2>SpaceCare</h2>
+                </div>
+            </article>
+        </a>
+        <a href="#transport-id">
+            <article class="transpor">
+                <div class="display">
+                    <img src="image/transoprt-logo.png" alt="Transport logo">
+                    <h2>Transport</h2>
+                </div>
+            </article>
+        </a>
+    </main>
+<!-- === Section SatCom ===-->
+    <h3 id="satcom-id">SatCom</h3>
+    <section class="présentation">
+        <article class="paragraphe">
+            <p class="sat-argument">Vous pouvez maintenant regarder des vidéos en streaming, effectuer des appels vidéo,
+                jouer en ligne, faire du télétravail même dans les endroits les plus reculés grâce au système internet
+                le plus avancé du système solaire. Combiné à une esthétique premium, notre récepteur se monte sur tous
+                les types de supports.</p>
+        </article>
+        <article class="space scene">
+            <div class="planet mars"></div>
+            <div class="connection">
+                <div class="signal"></div>
+                <div class="signal sec"></div>
+                <div class="signal tes"></div>
+            </div>
+            <div class="planet planet-bottom"></div>
+        </article>
+    </section>
+      <!-- popup Offre SatCom -->
+
+
+      <section class="buy-sat">
+        <div class="card">
+            <h4>RÉSIDENTIEL</h4>
+            <p>Connectez-vous à la maison</p>
+            <p class="price">À partir de 40 €/mois</p>
+            <div class="buttons">
+                <button class="btn" onclick="openPopup('popup-perseverance-commande')">COMMANDER</button>
+            </div>
+        </div>
+        <div class="card">
+            <h4>ITINÉRANCE</h4>
+            <p>Restez connecté en voyage</p>
+            <p class="price">À partir de 40 €/mois</p>
+            <div class="buttons">
+                <button class="btn" onclick="openPopup('popup-perseverance-commande')">COMMANDER</button>
+            </div>
+        </div>
+
+        <div id="overlay" class="overlay" onclick="closeAllPopups()">
+            <div id="popup-perseverance-commande" class="popup" onclick="event.stopPropagation()">
+                <span class="close-btn" onclick="closeAllPopups()">✖</span>
+                <div class="section payment">
+                
+                    <form id="paymentForm">
+                        <label for="card">Numéro de carte</label>
+                        <input type="text" id="card" placeholder="XXXX XXXX XXXX XXXX">
+                
+                        <label for="name">Nom sur la carte</label>
+                        <input type="text" id="name" placeholder="Jean Dupont" >
+                
+                        <label for="expiry">Date d'expiration</label>
+                        <input type="text" id="expiry" placeholder="MM/AA">
+                
+                        <label for="cvv">Code CVV</label>
+                        <input type="text" id="cvv" placeholder="123">
+                          <br>
+                        <button type="submit">Payer</button>
+                        <div id="confirmation" class="confirmation">
+                          ✅ Paiement effectué avec succès ! Merci pour votre commande.
+                        </div>
+                        <a href="service.html" class="return-button">Retour</a>
+                      </form>
+                  </div>
+
+            </div>
+        </div>
+</section>
+<!-- === Section SpaceCare === -->
+    <section>
+        <h3 id="spacecare-id">SpaceCare</h3>
+        <article>
+            <p class="texte-clasique">Services et assistance par les personnes qui connaissent le mieux l'espace et vos produits Cosmo.</p>
+        </article>
+    </section>
+    <section class="présentation">
+        <article class="argument">
+            <img class="picto" src="image/speed.svg" alt="Icone Rapidité">
+            <h4>Rapidité</h4>
+            <p class="p-argument">En cas de panne ou renouvellement, un remplacement rapide est prévu.</p>
+        </article>
+        <article class="argument">
+            <img class="picto" src="image/dialog.svg" alt="Icone Assistance">
+            <h4>Assistance 24/7</h4>
+            <p class="p-argument">Peu importe où vous vous situez, notre assistance est là pour vous.</p>
+        </article>
+        <article class="argument">
+            <img class="picto" src="image/lock.svg" alt="Icone Sécurité">
+            <h4>Sécurité</h4>
+            <p class="p-argument">En cas de danger ou de panne critique, nous vous géolocalisons et intervenons
+                rapidement.</p>
+        </article>
+    </section>
+    <p class="texte-clasique">Sans engagement</p>
+    <p class="price">À partir de 40 €/mois</p>
+    <div class="buttons">
+        <button class="btn" onclick="openPopup('popup-perseverance-commande')">S'abonner</button>
+    </div>
+    <!-- === Section Transport === -->
+    <section class="transport">
+        <h3 id="transport-id">Transport</h3>
+        <article class="intro">
+            <p class="texte-clasique">Grâce à nos nombreuses bases de lancement, nous desservons chaque planète tous les
+                jours.</p>
+        </article>
+        <article class="présentation-option">
+            <a class="lien" href="transport.html">
+            <div class="option voyage">
+                <h4 class="titre-transport">Voyage</h4>
+                <p>Réserver ma place</p>
+            </div>
+            </a>
+            <a class="lien" href="transport.html">
+            <div class="option fret">
+                <h4 class="titre-transport">FRET</h4>
+                <a class="lien" href="transport.html">Réserver un conteneur</a>
+            </div>
+            </a>
+        </article>
+    </section>
+     <!-- === Footer === -->
+    <footer>
+        <ul>
+            <li class="logo-div">
+                <img class="logo" src="image/logo.png" alt="logo">
+            </li>
+            <li>
+                <h4 class="logo-texte">Cosmo</h4>
+            </li>
+        </ul>
+        <ul>
+            <li class="texte-footer">
+                <h4>Coordonéer du siege</h4>
+                <p>Terre</p>
+                <p>Centre spacial de paris</p>
+                <p>N° 05 73 98 24 98</p>
+            </li>
+        </ul>
+        <ul>
+            <li class="texte-footer">
+                <h4>Produit</h4>
+                <p><a href="service.html">Service</a></p>
+                <p><a href="techno.html">Nos Téchnologie</a></p>
+                <p><a href="ship.html">Vaisseau</a></p>
+            </li>
+        </ul>
+        <ul>
+            <li class="texte-footer">
+                <h4>Contacte</h4>
+                <p>N°: 05 73 98 24 98</p>
+                <p>Email: zinj@heart.un</p>
+                <p>Réseau: @cosmo </p>
+            </li>
+        </ul>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/service.js"></script>
+    <script>
+
+function openPopup(popupId) {
+    document.getElementById('overlay').classList.add('active');
+    document.querySelectorAll('.popup').forEach(p => p.classList.remove('visible'));
+    document.getElementById(popupId).classList.add('visible');
+}
+
+function closeAllPopups() {
+    document.getElementById('overlay').classList.remove('active');
+    document.querySelectorAll('.popup').forEach(p => p.classList.remove('visible'));
+}
+
+
+
+const paymentForm = document.getElementById('paymentForm');
+if (paymentForm) {
+    paymentForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (paymentForm.checkValidity()) {
+            document.getElementById('confirmation').style.display = 'block';
+        } else {
+            alert("Veuillez remplir correctement tous les champs.");
+        }
+    });
+}
+
+    </script>
+</body>
+
+</html>

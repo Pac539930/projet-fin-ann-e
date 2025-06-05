@@ -1,0 +1,504 @@
+
+body{
+    font-family: FAMILY_NAME;
+    color: var(--main-color);
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    text-align: center;
+    background-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent 50%),
+    linear-gradient(to top, rgba(0, 0, 0, 1), transparent 50%),
+    url('../image/vaisseau.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+    background-size: cover;
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+h1{
+    font-size: 100px;
+    margin: 2%;
+}
+
+.p-intro{
+  font-size: 2.5em;
+    margin: 5%;
+}
+
+.buttons-categorie {
+    display: flex;
+    text-align: center;
+    list-style: none;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+}
+
+ul{
+    margin: 0px;
+}
+
+.tout-ship{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#bt-tout-cat{
+  margin: 10px 10px;
+
+}
+
+.animated-link {
+    position: relative;
+    display: inline-block;
+    font-size: 25px;
+    color: var(--main-color);
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    width: 150px;
+}
+
+#bt-tout-catego {
+    width: 100px;
+    height: 50px;
+    color: var(--main-color);
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+
+.link-text {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.text-top {
+    transform: translateY(0);
+    opacity: 1;
+    width: 80%;
+    margin: auto;
+    position: static;
+}
+
+.text-bottom {
+    transform: translateY(100%);
+    opacity: 0;
+    text-align: center;
+}
+
+.animated-link:hover .text-top {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.animated-link:hover .text-bottom {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* section carte */
+
+.fond-etoile{
+  background: linear-gradient(to top, rgba(0,0,0,0.3) 70%, rgba(0,0,0.9) 100%),url('../image/wallpaperfuser.jpeg');
+  background-size: contain;
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+    width: 100%;
+}
+
+.articles.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.produit {
+    max-width: 400px;
+    min-width: 400px;
+    height: 20%;
+    margin-top: 1%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.rover{
+    background: linear-gradient(rgba(0, 0, 0, 0.5)), url('../image/aa.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.img-produit {
+  margin: 1px;
+    max-width: 98%;
+    height: 20em;
+}
+
+.buttons{
+    margin: 7%;
+    display: flex;
+    justify-content: space-around;
+}
+
+h2 {
+    font-size: 3em;   
+    margin: 2%;   
+}
+
+ /* Overlay flou */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+
+}
+
+.overlay.active {
+    display: flex;
+}
+
+  /* Popup */
+  .popup {
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5)), url('../image/wallpaperfuser.jpeg') no-repeat center center;
+    background-size: cover;
+    border-radius: 12px;
+    width: 85%;
+    max-height: 90%;     /* limite la hauteur à 80% de l'écran */
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.3s ease;
+    display: none;
+    border: solid 2px white;
+
+}
+
+  .popup.visible {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+  .close-btn:hover {
+    color: red;
+}
+
+h3{
+    font-size: 5em;
+    margin: 2%;
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+  .flex{
+    width: 50%;
+    padding: 2% ;
+}
+
+  .popup-img{
+    width: 100%;
+    margin-bottom: 5%;
+   
+}
+
+.popup-img-lanceur{
+  height: 700px;
+  margin-top: 50px;
+
+}
+
+.display {
+  display: flex;
+
+}
+
+  .detail{
+    text-align: justify;
+    margin-top: 0%;
+    font-size: 20px;
+}
+
+.detail-lanceur{
+  margin: 40px;
+  text-align: justify;
+  font-size: 30px;
+}
+
+  .argument {
+    text-align: left;
+    padding: 2%;
+}
+
+.shema{
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+
+    background-color: #333;
+    border: solid 1px white;
+    border-radius: 10px;
+    width: 50%;
+    margin: 2%;
+}
+
+.satellite{
+    background: linear-gradient(rgba(0, 0, 0, 0.3)), url('../image/lune2.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.ship{
+  background: linear-gradient(rgba(0, 0, 0, 0.3)), url('../image/index.png') no-repeat center center;
+  background-size: cover;
+}
+
+h4{
+    font-size: 1em;
+}
+
+.img-argument{
+    width: 25%;
+}
+
+h5{
+    font-size: 30px;
+    margin: 0%;
+}
+
+.prix{
+    font-size: 30px;
+}
+
+.titre-lanceur {
+  writing-mode: vertical-lr;
+  height: 700px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  /* From Uiverse.io by 212004ALJI */ 
+button,button::after {
+    padding: 10px 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
+    position: relative;
+    border: solid 1px white;
+  }
+  
+  button::after {
+    --move1: inset(50% 50% 50% 50%);
+    --move2: inset(31% 0 40% 0);
+    --move3: inset(39% 0 15% 0);
+    --move4: inset(45% 0 40% 0);
+    --move5: inset(45% 0 6% 0);
+    --move6: inset(14% 0 61% 0);
+    clip-path: var(--move1);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+  }
+  
+  button:hover::after {
+    animation: glitch_4011 1s;
+    text-shadow: 10 10px 10px black;
+    animation-timing-function: steps(2, end);
+    text-shadow: -3px -3px 0px #1df2f0, 3px 3px 0px #E94BE8;
+    background-color: transparent;
+    border: 3px solid rgb(0, 255, 213);
+  }
+  
+  button:hover {
+    text-shadow: -1px -1px 0px #1df2f0, 1px 1px 0px #E94BE8;
+  }
+  
+  button:hover {
+    background-color: transparent;
+    border: 1px solid rgb(0, 255, 213);
+    box-shadow: 0px 10px 10px -10px rgb(0, 255, 213);
+  }
+  
+  @keyframes glitch_4011 {
+    0% {
+      clip-path: var(--move1);
+      transform: translate(0px,-10px);
+    }
+  
+    10% {
+      clip-path: var(--move2);
+      transform: translate(-10px,10px);
+    }
+  
+    20% {
+      clip-path: var(--move3);
+      transform: translate(10px,0px);
+    }
+  
+    30% {
+      clip-path: var(--move4);
+      transform: translate(-10px,10px);
+    }
+  
+    40% {
+      clip-path: var(--move5);
+      transform: translate(10px,-10px);
+    }
+  
+    50% {
+      clip-path: var(--move6);
+      transform: translate(-10px,10px);
+    }
+  
+    60% {
+      clip-path: var(--move1);
+      transform: translate(10px,-10px);
+    }
+  
+    70% {
+      clip-path: var(--move3);
+      transform: translate(-10px,10px);
+    }
+  
+    80% {
+      clip-path: var(--move2);
+      transform: translate(10px,-10px);
+    }
+  
+    90% {
+      clip-path: var(--move4);
+      transform: translate(-10px,10px);
+    }
+  
+    100% {
+      clip-path: var(--move1);
+      transform: translate(0);
+    }
+  }
+  
+  
+
+  
+
+
+  @media (max-width: 406px) {
+
+    .produit{
+      max-width: 380px;
+
+      min-width: 380px;
+      
+    }
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .display {
+      display: flex;
+      justify-content: center;
+        flex-wrap: wrap;
+        flex: 1; 
+  }
+        .titre-lanceur {
+          
+          font-size: 7.5em;
+
+      }
+      
+
+  .flex {
+      margin: 10px; /* Add some spacing */
+      width: auto;
+  }
+
+  .popup-img {
+      max-width: 100%; /* Ensure images are responsive */
+      height: auto; /* Maintain aspect ratio */
+  }
+
+  ul{
+    padding: 5%;
+
+ }
+
+  h3 {
+      font-size: 1.5em; /* Adjust heading size */
+  }
+
+  .detail {
+      font-size: 0.9em; /* Adjust text size */
+  }
+
+  .shema{
+    width: 40%;
+  }
+
+  .shema h4 {
+      font-size: 1em; /* Adjust subheading size */
+  }
+
+
+
+}
