@@ -110,7 +110,7 @@
             <p>Connectez-vous à la maison</p>
             <p class="price">À partir de 40 €/mois</p>
             <div class="buttons">
-                <button class="btn" onclick="openPopup('popup-perseverance-commande')">COMMANDER</button>
+                <button class="btn" onclick="openPopup('popup-commande')">COMMANDER</button>
             </div>
         </div>
         <div class="card">
@@ -118,15 +118,14 @@
             <p>Restez connecté en voyage</p>
             <p class="price">À partir de 40 €/mois</p>
             <div class="buttons">
-                <button class="btn" onclick="openPopup('popup-perseverance-commande')">COMMANDER</button>
+                <button class="btn" onclick="openPopup('popup-commande')">COMMANDER</button>
             </div>
         </div>
 
         <div id="overlay" class="overlay" onclick="closeAllPopups()">
-            <div id="popup-perseverance-commande" class="popup" onclick="event.stopPropagation()">
+            <div id="popup-commande" class="popup" onclick="event.stopPropagation()">
                 <span class="close-btn" onclick="closeAllPopups()">✖</span>
                 <div class="section payment">
-                
                     <form id="paymentForm">
                         <label for="card">Numéro de carte</label>
                         <input type="text" id="card" placeholder="XXXX XXXX XXXX XXXX">
@@ -179,7 +178,7 @@
     <p class="texte-clasique">Sans engagement</p>
     <p class="price">À partir de 40 €/mois</p>
     <div class="buttons">
-        <button class="btn" onclick="openPopup('popup-perseverance-commande')">S'abonner</button>
+        <button class="btn" onclick="openPopup('popup-commande')">S'abonner</button>
     </div>
     <!-- === Section Transport === -->
     <section class="transport">
@@ -207,7 +206,7 @@
     <footer>
         <ul>
             <li class="logo-div">
-                <img class="logo" src="image/logo.png" alt="logo">
+                <img class="logo" src="image/logo.png" alt="Logo Cosmo">
             </li>
             <li>
                 <h4 class="logo-texte">Cosmo</h4>
@@ -215,7 +214,7 @@
         </ul>
         <ul>
             <li class="texte-footer">
-                <h4>Coordonéer du siege</h4>
+                <h4>Coordonnées du siege</h4>
                 <p>Terre</p>
                 <p>Centre spacial de paris</p>
                 <p>N° 05 73 98 24 98</p>
@@ -223,15 +222,15 @@
         </ul>
         <ul>
             <li class="texte-footer">
-                <h4>Produit</h4>
+                <h4>Produits</h4>
                 <p><a href="service.html">Service</a></p>
-                <p><a href="techno.html">Nos Téchnologie</a></p>
+                <p><a class="lien-footer" href="techno.html">Nos Technologies</a></p>
                 <p><a href="ship.html">Vaisseau</a></p>
             </li>
         </ul>
         <ul>
             <li class="texte-footer">
-                <h4>Contacte</h4>
+                <h4>Contact</h4>
                 <p>N°: 05 73 98 24 98</p>
                 <p>Email: zinj@heart.un</p>
                 <p>Réseau: @cosmo </p>
@@ -239,35 +238,6 @@
         </ul>
     </footer>
     <script src="js/main.js"></script>
-    <script src="js/service.js"></script>
-    <script>
-
-function openPopup(popupId) {
-    document.getElementById('overlay').classList.add('active');
-    document.querySelectorAll('.popup').forEach(p => p.classList.remove('visible'));
-    document.getElementById(popupId).classList.add('visible');
-}
-
-function closeAllPopups() {
-    document.getElementById('overlay').classList.remove('active');
-    document.querySelectorAll('.popup').forEach(p => p.classList.remove('visible'));
-}
-
-
-
-const paymentForm = document.getElementById('paymentForm');
-if (paymentForm) {
-    paymentForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        if (paymentForm.checkValidity()) {
-            document.getElementById('confirmation').style.display = 'block';
-        } else {
-            alert("Veuillez remplir correctement tous les champs.");
-        }
-    });
-}
-
-    </script>
+    <script src="js/payement.js"></script>
 </body>
-
 </html>

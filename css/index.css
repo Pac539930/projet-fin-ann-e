@@ -111,7 +111,7 @@ h3 {
 .produit {
     flex: 1 1 280px;
     max-width: 450px;
-    height: 550px;
+    height: 616px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

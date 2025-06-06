@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="fr">
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/nav.css">
@@ -22,12 +22,9 @@
                     <a class="titre-nav" href="service.html">Nos Services</a>
                     <div class="sub-nav">
                         <div class="titles">
-                            <a href="service.html#satcom-id" class="sub_titre-nav"
-                                data-bg="image/satcom.webp">SatCom</a>
-                            <a href="service.html#spacecare-id" class="sub_titre-nav"
-                                data-bg="image/spacecare.jpg">SpaceCare</a>
-                            <a href="service.html#transport-id" class="sub_titre-nav"
-                                data-bg="image/transport.avif">Transport</a>
+                            <a href="service.html#satcom-id" class="sub_titre-nav" data-bg="image/satcom.webp">SatCom</a>
+                            <a href="service.html#spacecare-id" class="sub_titre-nav" data-bg="image/spacecare.jpg">SpaceCare</a>
+                            <a href="service.html#transport-id" class="sub_titre-nav" data-bg="image/transport.avif">Transport</a>
                         </div>
                     </div>
                 </li>
@@ -62,24 +59,24 @@
             garantissant sécurité, efficacité et performance exceptionnelles dans les conditions les plus extrêmes de
             l'espace.</p>
     </main>
-        <!-- === Section : Filtres de catégories === -->
+        <!-- === Filter catégorie === -->
     <section>
         <ul class="buttons-categorie">
             <li class="animated-link">
-                <button class="tout-ship" id="bt-tout-cat" onclick="filterArticles('all')">Touts nos ship</button>
+                <button class="tout-ship" id="bt-tout-cat" onclick="filterArticles('all')">Tous nos ships</button>
             </li>
             <li class="animated-link" onclick="filterArticles('rover')">
-                <img class="link-text text-top" src="image/rover.svg"></img>
+                <img class="link-text text-top" src="image/rover.svg" alt="Rover">
                 <span class="link-text text-bottom">Rover</span>
             </li>
 
             <li class="animated-link" onclick="filterArticles('satellite')">
-                <img class="link-text text-top" src="image/satellite-svg.svg"></img>
+                <img class="link-text text-top" src="image/satellite-svg.svg" alt="satelite">
                 <span class="link-text text-bottom">Satellite</span>
             </li>
 
             <li class="animated-link" onclick="filterArticles('ship')">
-                <img class="link-text text-top" src="image/space-ship.svg"></img>
+                <img class="link-text text-top" src="image/space-ship.svg" alt="lanceur">
                 <span class="link-text text-bottom">Lanceur</span>
             </li>
         </ul>
@@ -500,89 +497,113 @@
                 <h5>Prix</h5>
                 <p class="prix">60 millions €</p>
             </div>
+            <!-- popup command -->
+            <div id="popup-commande" class="popup" onclick="event.stopPropagation()">
+                <span class="close-btn" onclick="closeAllPopups()">✖</span>
+                <div class="section payment">
+                    <form id="paymentForm">
+                     <label for="card">Numéro de carte</label>
+                     <input type="text" id="card" placeholder="XXXX XXXX XXXX XXXX">
+            
+                     <label for="name">Nom sur la carte</label>
+                     <input type="text" id="name" placeholder="Jean Dupont" >
+            
+                        <label for="expiry">Date d'expiration</label>
+                        <input type="text" id="expiry" placeholder="MM/AA">
+            
+                       <label for="cvv">Code CVV</label>
+                       <input type="text" id="cvv" placeholder="123">
+                     <br>
+                    <button type="submit">Payer</button>
+                    <div id="confirmation" class="confirmation">
+                      ✅ Paiement effectué avec succès ! Merci pour votre commande.
+                    </div>
+                    <a href="ship.html" class="return-button">Retour</a>
+                  </form>
+              </div>
         </div>
+        </div>    
         <div class="articles">
-            <!-- PRODUIT 1 -->
+            <!-- product 1 -->
             <div class="produit rover">
                 <h2>Perseverance</h2>
                 <img class="img-produit" src="image/Perseverance-2-Photoroom.png" alt="rover image">
                 <div class="buttons">
                     <button onclick="openPopup('popup-perseverance-info')">En savoir plus</button>
-                    <a href="compte.html#commande"><button>Commander</button></a>
+                    <button class="btn" onclick="openPopup('popup-commande')">COMMANDER</button>
                 </div>
             </div>
-            <!-- PRODUIT 2 -->
+            <!-- product 2 -->
             <div class="produit rover">
                 <h2>Spirit</h2>
                 <img class="img-produit" src="image/spirit-rover.png" alt="rover image">
                 <div class="buttons">
                     <button onclick="openPopup('popup-spirit-info')">En savoir plus</button>
-                    <a href="compte.html#commande"><button>Commander</button></a>
+                    <button class="btn" onclick="openPopup('popup-commande')">COMMANDER</button>
                 </div>
             </div>
-            <!-- PRODUIT 3 -->
+            <!-- product 3 -->
             <div class="produit rover">
                 <h2>Arya</h2>
                 <img class="img-produit" src="image/rover3.png" alt="rover image">
                 <div class="buttons">
                     <button onclick="openPopup('popup-arya-info')">En savoir plus</button>
-                    <a href="compte.html#commande"><button>Commander</button></a>
+                    <button class="btn" onclick="openPopup('popup-commande')">COMMANDER</button>
                 </div>
             </div>
-            <!-- PRODUIT 4 -->
+            <!-- product 4 -->
             <div class="produit satellite">
                 <h2>Hubbul</h2>
                 <img class="img-produit" src="image/hubble1.png" alt="satelite Hubbul image">
                 <div class="buttons">
                     <button onclick="openPopup('popup-hubul-info')">En savoir plus</button>
-                    <a href="compte.html#commande"><button>Commander</button></a>
+                    <button class="btn" onclick="openPopup('popup-commande')">COMMANDER</button>
                 </div>
             </div>
-            <!-- PRODUIT 5 -->
+            <!-- product 5 -->
             <div class="produit satellite">
                 <h2>Ares</h2>
                 <img class="img-produit" src="image/sat2.webp" alt="satelite ares image">
                 <div class="buttons">
                     <button onclick="openPopup('popup-ares-info')">En savoir plus</button>
-                    <a href="compte.html#commande"><button>Commander</button></a>
+                    <button class="btn" onclick="openPopup('popup-commande')">COMMANDER</button>
                 </div>
             </div>
-            <!-- PRODUIT 6 -->
+            <!-- product 6 -->
             <div class="produit satellite">
                 <h2>Voyageur</h2>
                 <img class="img-produit" src="image/sat3.webp" alt="satelite voyageur image">
                 <div class="buttons">
                     <button onclick="openPopup('popup-voyageur-info')">En savoir plus</button>
-                    <a href="compte.html#commande"><button>Commander</button></a>
+                    <button class="btn" onclick="openPopup('popup-commande')">COMMANDER</button>
                 </div>
             </div>
-            <!-- PRODUIT 7 -->
+            <!-- product 7 -->
             <div class="produit ship">
                 <h2>Ariane V6</h2>
                 <img class="img-produit" src="image/ariane.webp" alt="Fuser image">
                 <div class="buttons">
                     <button onclick="openPopup('popup-ariane-info')">En savoir plus</button>
-                    <a href="compte.html#commande"><button>Commander</button></a>
+                    <button class="btn" onclick="openPopup('popup-commande')">COMMANDER</button>
                 </div>
             </div>
-            <!-- PRODUIT 8 -->
+            <!-- product 8 -->
             <div class="produit ship">
                 <h2>Saturne V4</h2>
                 <img class="img-produit" src="image/blueorigin.png" alt="Fuser image">
                 <div class="buttons">
                     <button onclick="openPopup('popup-saturne-info')">En savoir plus</button>
-                    <a href="compte.html#commande"><button>Commander</button></a>
+                    <button class="btn" onclick="openPopup('popup-commande')">COMMANDER</button>
                 </div>
             </div>
 
         </div>
     </section>
-    <!-- Footer du site -->
-
+    <!-- Footer -->
     <footer>
         <ul>
             <li class="logo-div">
-                <img class="logo" src="image/logo.png" alt="logo">
+                <img class="menuburge" src="image/logo.png" alt="Logo Cosmo">
             </li>
             <li>
                 <h4 class="logo-texte">Cosmo</h4>
@@ -590,29 +611,31 @@
         </ul>
         <ul>
             <li class="texte-footer">
-                <h4>Coordonéer du siege</h4>
+                <h4>Coordonnées du siège</h4>
                 <p>Terre</p>
-                <p>Centre spacial de paris</p>
+                <p>Centre spatial de Paris</p>
                 <p>N° 05 73 98 24 98</p>
             </li>
         </ul>
         <ul>
             <li class="texte-footer">
-                <h4>Produit</h4>
+                <h4>Produits</h4>
                 <p><a href="service.html">Service</a></p>
-                <p><a href="techno.html">Nos Téchnologie</a></p>
+                <p><a class="lien-footer" href="techno.html">Nos Technologies</a></p>
                 <p><a href="ship.html">Vaisseau</a></p>
             </li>
         </ul>
         <ul>
             <li class="texte-footer">
-                <h4>Contacte</h4>
+                <h4>Contact</h4>
                 <p>N°: 05 73 98 24 98</p>
                 <p>Email: zinj@heart.un</p>
                 <p>Réseau: @cosmo </p>
             </li>
         </ul>
     </footer>
-</body>
+<script src="js/main.js"></script>
+<script src="js/payement.js"></script>
 <script src="js/ship.js"></script>
+</body>
 </html>

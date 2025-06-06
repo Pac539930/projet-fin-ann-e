@@ -11,7 +11,7 @@ body {
   display: flex;
   padding: 1rem;
 }
-
+  /* ------------------ Solar Systeme ------------------ */
 .solar-system {
   position: relative;
   width: 100%;
@@ -77,6 +77,8 @@ body {
   0%, 100% { transform: scale(1); box-shadow: 0 0 10px 4px rgba(255, 200, 0, 0.5); }
   50% { transform: scale(1.1); box-shadow: 0 0 20px 8px rgba(255, 200, 0, 0.8); }
 }
+
+  /* ------------------ Form------------------ */
 
 .form-panel {
   background: linear-gradient(135deg, rgb(104, 139, 132), rgb(129, 158, 157));
@@ -166,8 +168,6 @@ table {
   }
   
 
-
-
   @media (max-width: 1000px) {
 
 .solar-system{
@@ -189,7 +189,6 @@ table{
 }
 
 }
-
 
 @media (max-width: 550px) {
 

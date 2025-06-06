@@ -169,25 +169,27 @@ a {
   padding: 1rem 0;
   gap: 1rem;
 }
-
-
-
-
-@media (max-width: 893px) {
+@media (max-width: 1022px) {
   .titre-nav {
-    font-size: 0.9em;      
+    font-size: 1em;     
+    padding: 5px;      
+ 
   }
-
-
 }
 
-@media (max-width: 500px) {
+@media (max-width: 775px) {
+  .titre-nav {
+    font-size: 0.7em;
+    padding: 4px;      
+  }
+}
+
+@media (max-width: 520px) {
   .titre-nav {
     font-size: 2.4em;
     text-align: center;
     line-height: 2.5;
   }
-
 
   .burger {
       display:block;
@@ -217,6 +219,7 @@ a {
       background-image: url('../image/logo.png');
       animation: spin 5s linear infinite;
   }
+
   @keyframes spin {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
