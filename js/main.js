@@ -1,15 +1,3 @@
-
-const nav = document.querySelector('.main-nav');
-  
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    nav.classList.add('frosted');
-  } else {
-    nav.classList.remove('frosted');
-  }
-});
-
-
     document.querySelectorAll(".sub_titre-nav").forEach(link => {
         link.addEventListener("mouseover", () => {
             const parentNav = link.closest(".sub-nav");
@@ -22,17 +10,15 @@ window.addEventListener('scroll', () => {
         });
     });
 
-
-
+const nav = document.querySelector('.main-nav');
   
-
-
-
-
-
-
-
-
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    nav.classList.add('frosted');
+  } else {
+    nav.classList.remove('frosted');
+  }
+});
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -51,6 +37,10 @@ window.addEventListener('scroll', () => {
 
 
 
+
+
+
+    
 
   const toggleBtn = document.querySelector(".menuburge");
   const nava = document.querySelector(".main-nav");
