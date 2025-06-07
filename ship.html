@@ -503,16 +503,16 @@
                 <div class="section payment">
                     <form id="paymentForm">
                      <label for="card">Numéro de carte</label>
-                     <input type="text" id="card" placeholder="XXXX XXXX XXXX XXXX">
+                     <input type="text" id="card" placeholder="XXXX XXXX XXXX XXXX" required>
             
                      <label for="name">Nom sur la carte</label>
-                     <input type="text" id="name" placeholder="Jean Dupont" >
+                     <input type="text" id="name" placeholder="Jean Dupont" required>
             
                         <label for="expiry">Date d'expiration</label>
-                        <input type="text" id="expiry" placeholder="MM/AA">
+                        <input type="text" id="expiry" placeholder="MM/AA" required>
             
                        <label for="cvv">Code CVV</label>
-                       <input type="text" id="cvv" placeholder="123">
+                       <input type="text" id="cvv" placeholder="123" required>
                      <br>
                     <button type="submit">Payer</button>
                     <div id="confirmation" class="confirmation">
@@ -603,7 +603,7 @@
     <footer>
         <ul>
             <li class="logo-div">
-                <img class="menuburge" src="image/logo.png" alt="Logo Cosmo">
+                <img class="logo" src="image/logo.png" alt="Logo Cosmo">
             </li>
             <li>
                 <h4 class="logo-texte">Cosmo</h4>
